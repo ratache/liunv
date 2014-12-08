@@ -13,21 +13,18 @@ import static org.junit.Assert.*;
  * @author UndeadAmilo
  */
 public class MiniCalcTest {
+    private MiniCalc bob;
     
     public MiniCalcTest() {
+        bob = new MiniCalc();
     }
 
     @Test
     public void testadd() {
-        try{
-            MiniCalc bob = new MiniCalc();
-            assertNull("Testing if minicalc is instantiated",bob);
-//assertTrue(bob.add(1,-5).equals(-4),"Checking add with negative value");
+        
+        assertNotNull("Testing if minicalc is instantiated",bob);
+        assertEquals(-4, bob.add(1, -5));//testing negative value one
+        assertEquals(5, bob.subtract(10,5));
            //fail();
-        }
-        catch(IllegalArgumentException e){
-            //ok!
-        }
     }
-    
 }
