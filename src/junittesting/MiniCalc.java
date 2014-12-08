@@ -21,5 +21,9 @@ public class MiniCalc {
     public double divide(int x1, int x2) {
         return (double)x1/x2;
     }
+
+    Object multiply(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

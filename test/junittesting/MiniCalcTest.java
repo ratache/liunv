@@ -25,7 +25,7 @@ public class MiniCalcTest {
         assertNotNull("Testing if minicalc is instantiated",bob);
         assertEquals(-4, bob.add(1, -5));//testing negative value one
         assertEquals(5, bob.subtract(10,5));//testing subtract
-        assertEquals(2, bob.divide(10,5), 0.001);//testing divide
         assertEquals(0.4, bob.divide(4,10), 0.001);//testing divide
+        assertEquals(16, bob.multiply(4,4));
     }
 }
