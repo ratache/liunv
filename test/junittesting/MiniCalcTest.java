@@ -21,9 +21,8 @@ public class MiniCalcTest {
     public void testadd() {
         try{
             MiniCalc bob = new MiniCalc();
-            int x1 = 1;
-            int x2 = -5;
-            bob.add(x1, x2);
+            assertNull("Testing if minicalc is instantiated",bob);
+//assertTrue(bob.add(1,-5).equals(-4),"Checking add with negative value");
            //fail();
         }
         catch(IllegalArgumentException e){
