@@ -15,7 +15,7 @@ public class MiniCalc {
     }
 
     public int subtract(int x1, int x2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return x1 - x2;
     }
     
 }
