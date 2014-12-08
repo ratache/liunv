@@ -22,8 +22,8 @@ public class MiniCalc {
         return (double)x1/x2;
     }
 
-    Object multiply(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int multiply(int x1, int x2) {
+        return x1 * x2;
     }
     
 }
