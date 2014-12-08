@@ -18,7 +18,7 @@ public class MiniCalc {
         return x1 - x2;
     }
 
-    public int divide(int x1, int x2) {
+    public double divide(int x1, int x2) {
         return x1/x2;
     }
     
