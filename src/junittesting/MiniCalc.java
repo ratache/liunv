@@ -18,8 +18,8 @@ public class MiniCalc {
         return x1 - x2;
     }
 
-    Object divide(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int divide(int x1, int x2) {
+        return x1/x2;
     }
     
 }
