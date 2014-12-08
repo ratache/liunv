@@ -19,7 +19,7 @@ public class MiniCalc {
     }
 
     public double divide(int x1, int x2) {
-        return x1/x2;
+        return (double)x1/x2;
     }
     
 }
