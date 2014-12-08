@@ -43,4 +43,21 @@ public class MiniCalcTest {
         fail("The test case is a prototype.");
     }
     
+    /*
+        Test of addition of two int values. Testing this addition method
+        is related to constraints on the input and checking that the output
+        is correct.
+    */
+    @Test
+    public void testadd() {
+        try{
+            new MiniCalc();
+            fail();
+        }
+        catch(IllegalArgumentException e){
+            //ok!
+        }
+        fail("The test case is a prototype.");
+    }
+    
 }

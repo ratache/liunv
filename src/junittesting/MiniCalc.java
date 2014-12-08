@@ -10,5 +10,8 @@ package junittesting;
  * @author UndeadAmilo
  */
 public class MiniCalc {
+    public int add(int x1, int x2){
+        return x1 + x2;
+    }
     
 }
