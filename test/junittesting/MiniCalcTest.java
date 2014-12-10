@@ -39,10 +39,10 @@ public class MiniCalcTest {
         bob.intToBinary(-1);
     }
     
-    @Test
+    @Test(expected=IllegalArgumentException.class)
     public void testIntToHex(){
-        int parameter = -1;
-        String expectedValue = "NotNull";
+        int parameter = 0;
+        String expectedValue = "1";
         assertEquals(expectedValue, bob.intToHex(parameter));
     }
 }

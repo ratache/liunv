@@ -29,13 +29,8 @@ public class MiniCalc {
     public String intToHex(int i)throws IllegalArgumentException {
         String retStr = "";
         int convert, divide, rest;
-//        if(i>=0){
-            convert = i;
-//        }
-//        else{
-//            throw new IllegalArgumentException("The supplied value was less than 0");
-//        }
-        
+        convert = i;
+    
         while(convert>0){
             divide = convert/16;
             rest = convert - divide * 16;
@@ -70,7 +65,7 @@ public class MiniCalc {
                 retStr = Integer.toString(rest) + retStr;
             }
         }
-        if(retStr==""){
+        if("".equals(retStr)){
             throw new IllegalArgumentException("The output of this method is empty. Check your parameters");
         }
         else{
