@@ -10,23 +10,23 @@ package junittesting;
  * @author UndeadAmilo
  */
 public class MiniCalc {
-    public int add(int x1, int x2){
+    public int add(int x1, int x2)throws IllegalArgumentException {
         return x1 + x2;
     }
 
-    public int subtract(int x1, int x2) {
+    public int subtract(int x1, int x2)throws IllegalArgumentException {
         return x1 - x2;
     }
 
-    public double divide(int x1, int x2) {
+    public double divide(int x1, int x2)throws IllegalArgumentException {
         return (double)x1/x2;
     }
 
-    public int multiply(int x1, int x2) {
+    public int multiply(int x1, int x2)throws IllegalArgumentException {
         return x1 * x2;
     }
 
-    public String intToHex(int i) {
+    public String intToHex(int i)throws IllegalArgumentException {
         String retStr = "";
         int convert, divide, rest;
         
@@ -69,7 +69,7 @@ public class MiniCalc {
         return retStr;        
     }
 
-    String intToBinary(int i) {
+    String intToBinary(int i)throws IllegalArgumentException {
         String binStr = "";
         boolean zeroFlag = true;
         int base = i;

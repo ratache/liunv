@@ -20,7 +20,7 @@ public class MiniCalcTest {
     }
 
     @Test
-    public void testAll() {
+    public void testCorrectCalls() {
         
         assertNotNull("Testing if minicalc is instantiated",bob);
         assertEquals(-4, bob.add(1, -5));//testing negative value one
@@ -31,5 +31,10 @@ public class MiniCalcTest {
         assertEquals("1", bob.intToBinary(1));
         assertEquals("11110111111", bob.intToBinary(1983));
         assertEquals("1111111111111111", bob.intToBinary(65536));
+    }
+    
+    @Test(expected=IllegalArgumentException.class)
+    public void testIncorrectCalls(){
+        bob.intToBinary(-1);
     }
 }
