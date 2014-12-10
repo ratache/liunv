@@ -30,6 +30,10 @@ public class MiniCalc {
         String retStr = "";
         int convert, divide, rest;
         convert = i;
+        
+        if(convert == 0){
+            return "0";
+        }
     
         while(convert>0){
             divide = convert/16;

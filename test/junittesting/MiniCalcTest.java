@@ -41,8 +41,8 @@ public class MiniCalcTest {
     
     @Test(expected=IllegalArgumentException.class)
     public void testIntToHex(){
-        int parameter = 0;
-        String expectedValue = "0";
+        int parameter = -1;
+        String expectedValue = "NOTNULL";
         assertEquals(expectedValue, bob.intToHex(parameter));
     }
     
