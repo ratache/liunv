@@ -59,8 +59,11 @@ public class MiniCalc {
                 retStr += Integer.toString(rest);
             }
         }
- 
         return retStr;        
+    }
+
+    String intToBinary(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
