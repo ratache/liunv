@@ -38,25 +38,32 @@ public class MiniCalc {
             convert = divide;
             
             if(rest==10){
-            retStr += "A";
+            //retStr += "A";
+                retStr = "A" + retStr;
             }
             else if(rest==11){
-                retStr += "B";
+              //  retStr += "B";
+                retStr = "B" + retStr;
             }
             else if(rest==12){
-                retStr += "C";
+                //retStr += "C";
+                retStr = "C" + retStr;
             }
             else if(rest==13){
-                retStr += "D";
+                //retStr += "D";
+                retStr = "D" + retStr;
             }
             else if(rest==14){
-                retStr += "E";
+                //retStr += "E";
+                retStr = "E" + retStr;
             }
             else if(rest==15){
-                retStr += "F";
+                //retStr += "F";
+                retStr = "F" + retStr;
             }
             else{
-                retStr += Integer.toString(rest);
+                //retStr += Integer.toString(rest);
+                retStr = Integer.toString(rest) + retStr;
             }
         }
         return retStr;        
