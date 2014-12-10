@@ -29,8 +29,12 @@ public class MiniCalc {
     public String intToHex(int i)throws IllegalArgumentException {
         String retStr = "";
         int convert, divide, rest;
-        
-        convert = i;
+        if(i>=0){
+            convert = i;
+        }
+        else{
+            throw new IllegalArgumentException("The supplied value was less than 0");
+        }
         
         while(convert>0){
             divide = convert/16;

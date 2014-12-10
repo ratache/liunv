@@ -31,10 +31,16 @@ public class MiniCalcTest {
         assertEquals("1", bob.intToBinary(1));
         assertEquals("11110111111", bob.intToBinary(1983));
         assertEquals("1111111111111111", bob.intToBinary(65536));
+
     }
     
     @Test(expected=IllegalArgumentException.class)
     public void testIncorrectCalls(){
         bob.intToBinary(-1);
+    }
+    
+    @Test
+    public void testIntToHex(){
+        bob.intToHex(-1);
     }
 }
