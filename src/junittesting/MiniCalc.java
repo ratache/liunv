@@ -63,7 +63,20 @@ public class MiniCalc {
     }
 
     String intToBinary(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String binStr = "";
+        int base = i;
+        int[] index = {1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768};//65534
+       
+        for(int k = index.length-1; k > 0; k--){
+            if(base>index[k]){
+                base = base - index[k];
+                binStr += "1";
+            }
+            else{
+                binStr+= "0";
+            }                
+        }  
+        return binStr;
     }
     
 }
