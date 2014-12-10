@@ -41,6 +41,8 @@ public class MiniCalcTest {
     
     @Test
     public void testIntToHex(){
-        bob.intToHex(-1);
+        int parameter = -1;
+        String expectedValue = "NotNull";
+        assertEquals(expectedValue, bob.intToHex(parameter));
     }
 }
