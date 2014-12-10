@@ -29,12 +29,12 @@ public class MiniCalc {
     public String intToHex(int i)throws IllegalArgumentException {
         String retStr = "";
         int convert, divide, rest;
-        if(i>=0){
+//        if(i>=0){
             convert = i;
-        }
-        else{
-            throw new IllegalArgumentException("The supplied value was less than 0");
-        }
+//        }
+//        else{
+//            throw new IllegalArgumentException("The supplied value was less than 0");
+//        }
         
         while(convert>0){
             divide = convert/16;
@@ -70,7 +70,13 @@ public class MiniCalc {
                 retStr = Integer.toString(rest) + retStr;
             }
         }
-        return retStr;        
+        if(retStr==""){
+            throw new IllegalArgumentException("The output of this method is empty. Check your parameters");
+        }
+        else{
+            return retStr;
+        }
+        
     }
 
     String intToBinary(int i)throws IllegalArgumentException {
@@ -97,7 +103,7 @@ public class MiniCalc {
                     binStr+= "0";
                 }
             }                
-        }  
+        }
         return binStr;
     }
     
