@@ -27,7 +27,9 @@ public class MiniCalcTest {
         assertEquals(5, bob.subtract(10,5));//testing subtract
         assertEquals(0.4, bob.divide(4,10), 0.001);//testing divide
         assertEquals(16, bob.multiply(4,4));
-        assertEquals("FE", bob.intToHex(254));        
+        assertEquals("FE", bob.intToHex(254));  
+        assertEquals("2A6", bob.intToHex(678));
+        assertEquals("F4240", bob.intToHex(1000000));
         assertEquals("11111110", bob.intToBinary(254));
     }
 }
