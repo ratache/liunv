@@ -42,7 +42,14 @@ public class MiniCalcTest {
     @Test(expected=IllegalArgumentException.class)
     public void testIntToHex(){
         int parameter = 0;
-        String expectedValue = "1";
+        String expectedValue = "0";
+        assertEquals(expectedValue, bob.intToHex(parameter));
+    }
+    
+    @Test
+    public void testIntToHexZero(){
+        int parameter = 0;
+        String expectedValue = "0";
         assertEquals(expectedValue, bob.intToHex(parameter));
     }
 }
