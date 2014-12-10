@@ -71,16 +71,22 @@ public class MiniCalc {
 
     String intToBinary(int i) {
         String binStr = "";
+        boolean zeroFlag = true;
         int base = i;
-        int[] index = {1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768};//65534
+        int[] index = {1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768};//65536
        
-        for(int k = index.length-1; k > 0; k--){
-            if(base>index[k]){
+        for(int k = index.length-1; k >= 0; k--){
+            if(base>=index[k]){
+                if(zeroFlag){
+                    zeroFlag = false;
+                }
                 base = base - index[k];
                 binStr += "1";
             }
             else{
-                binStr+= "0";
+                if(!zeroFlag){
+                    binStr+= "0";
+                }
             }                
         }  
         return binStr;
