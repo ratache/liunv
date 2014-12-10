@@ -28,6 +28,6 @@ public class MiniCalcTest {
         assertEquals(0.4, bob.divide(4,10), 0.001);//testing divide
         assertEquals(16, bob.multiply(4,4));
         assertEquals("F4240", bob.intToHex(1000000));
-      //  assertEquals("11111110", bob.intToBinary(254));
+        assertEquals("11111110", bob.intToBinary(254));
     }
 }
