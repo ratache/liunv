@@ -20,8 +20,7 @@ public class MiniCalcTest {
     }
 
     @Test
-    public void testCorrectCalls() {
-        
+    public void testCorrectCalls() {//tests for correct output
         assertNotNull("Testing if minicalc is instantiated",bob);
         assertEquals(-4, bob.add(1, -5));//testing negative value one
         assertEquals(5, bob.subtract(10,5));//testing subtract
@@ -31,25 +30,20 @@ public class MiniCalcTest {
         assertEquals("1", bob.intToBinary(1));
         assertEquals("11110111111", bob.intToBinary(1983));
         assertEquals("1111111111111111", bob.intToBinary(65536));
-
     }
     
     @Test(expected=IllegalArgumentException.class)
-    public void testIncorrectCalls(){
-        bob.intToBinary(-1);
-    }
-    
-    @Test(expected=IllegalArgumentException.class)
-    public void testIntToHex(){
-        int parameter = -1;
-        String expectedValue = "NOTNULL";
-        assertEquals(expectedValue, bob.intToHex(parameter));
+    public void testIllegalArguments(){
+        int negative = -1;
+        
+        bob.intToBinary(negative);
+        bob.intToHex(negative);
     }
     
     @Test
-    public void testIntToHexZero(){
-        int parameter = 0;
-        String expectedValue = "0";
-        assertEquals(expectedValue, bob.intToHex(parameter));
+    public void testZeroIntegerInput(){
+        int zeroInt = 0;
+        assertEquals("0", bob.intToHex(zeroInt));
+        assertEquals("", bob.intToBinary(zeroInt));        
     }
 }
