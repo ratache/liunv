@@ -26,18 +26,22 @@ public class MiniCalcTest {
         assertEquals(5, bob.subtract(10,5));//testing subtract
         assertEquals(0.4, bob.divide(4,10), 0.001);//testing divide
         assertEquals(16, bob.multiply(4,4));
-        assertEquals("F4240", bob.intToHex(1000000));
+        assertEquals("FEDCBA0", bob.intToHex(267242400));
         assertEquals("1", bob.intToBinary(1));
         assertEquals("11110111111", bob.intToBinary(1983));
         assertEquals("1111111111111111", bob.intToBinary(65536));
     }
     
     @Test(expected=IllegalArgumentException.class)
-    public void testIllegalArguments(){
+    public void testIllegalArgumentIntToHex(){
         int negative = -1;
-        
-        bob.intToBinary(negative);
         bob.intToHex(negative);
+    }
+    
+    @Test(expected=IllegalArgumentException.class)
+    public void testIllegalArgumentIntToBin(){
+        int negative = -1;
+        bob.intToBinary(negative);
     }
     
     @Test
