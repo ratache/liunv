@@ -58,7 +58,7 @@ public class MiniMenu {
             System.out.println("\nEnter second integer:");
             integer2 = System.in.read();
             
-            if(DEBUG && integer1==-1 && integer2==-1){
+            if(DEBUG){
                 integer1 = 1;
                 integer2 = 1;                
             }

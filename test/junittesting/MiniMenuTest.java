@@ -53,7 +53,7 @@ public class MiniMenuTest {
     public void testBasicFunctionalityWorks() throws Exception {
         sutMenu.callCalculator(1);       
         //then
-        verify(mockedCalc,times(1)).add(-1, -1);//Verifies that method is tested
+        verify(mockedCalc,times(1)).add(1, 1);//Verifies that method is tested
     }
     
     @Test
