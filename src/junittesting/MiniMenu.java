@@ -7,7 +7,7 @@ import java.io.IOException;
  * @author Per
  */
 public class MiniMenu {
-    private MiniCalc calc = new MiniCalc();
+    public MiniCalc calc = new MiniCalc();
     
     boolean run() throws IOException {
         int choice = getChoice();

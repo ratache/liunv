@@ -26,12 +26,14 @@ public class MiniMenuTest {
     private MiniCalc bobMock;
     
     public MiniMenuTest() {
-        bobMock = mock(MiniCalc.class);
+        
     }
  
     @Before
     public void setUp() {
         bobMenu = new MiniMenu();
+        bobMock = mock(MiniCalc.class);
+        bobMenu.setMockObject(bobMock);
     }
 
     /*
@@ -44,16 +46,11 @@ public class MiniMenuTest {
     public void testCorrectlyMenuChoice() throws Exception {
         //given
         int menuChoice = 1;
-        int num1 = 1;
-        int num2 = 1;
-        int result = 2;
-        bobMenu.setMockObject(bobMock);
-        when(bobMock.add(num1, num1)).thenReturn(result);//this is the expected result
-        
+        when(bobMock.add(1, 1)).thenReturn(2);//this is the expected result
         //when
         bobMenu.callCalculator(menuChoice);
         //then
-        verify(bobMock).add(num1, num2);
+        assertSame(2,bobMock.add(1, 1));
     }
     
 //    @Test
