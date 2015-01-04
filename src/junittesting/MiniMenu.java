@@ -59,4 +59,8 @@ public class MiniMenu {
     private void printResult(String integerResult) {
         System.out.println("\nResult "+integerResult+"\n");
     }
+    
+    public void setMockObject(MiniCalc bobInject){
+        calc = bobInject;
+    }
 }

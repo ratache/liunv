@@ -47,7 +47,7 @@ public class MiniMenuTest {
         int num1 = 1;
         int num2 = 1;
         int result = 2;
-        
+        bobMenu.setMockObject(bobMock);
         when(bobMock.add(num1, num1)).thenReturn(result);//this is the expected result
         
         //when
