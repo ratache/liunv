@@ -46,6 +46,8 @@ public class MiniMenuTest {
 
     /*
         This test tests behaviour when menu choice is correct.
+        We have three different abstract valuetypes, the choice of the user
+        the expected result and input.
     */
     @Test
     public void testCorrectlyMenuChoice() throws Exception {
