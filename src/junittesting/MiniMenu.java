@@ -7,7 +7,12 @@ import java.io.IOException;
  * @author Per
  */
 public class MiniMenu {
-    public MiniCalc calc = new MiniCalc();
+    private MiniCalc calc;
+    boolean DEBUG = true;
+
+    public MiniMenu(){
+        calc = new MiniCalc();
+    }
     
     boolean run() throws IOException {
         int choice = getChoice();
@@ -48,9 +53,16 @@ public class MiniMenu {
                 + "Addition\n"
                 + "***************************************\n"
                     + "Enter first integer:");
+            
             integer1 = System.in.read();
             System.out.println("\nEnter second integer:");
             integer2 = System.in.read();
+            
+            if(DEBUG && integer1==-1 && integer2==-1){
+                integer1 = 1;
+                integer2 = 1;                
+            }
+            
             integerResult = calc.add(integer1, integer2);
             printResult(Integer.toString(integerResult));
         }

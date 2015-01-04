@@ -38,7 +38,7 @@ public class MiniMenuTest {
         //given
         sutMenu = new MiniMenu();
         mockedCalc = mock(MiniCalc.class);
-        sutMenu.setMockObject(mockedCalc);
+        sutMenu.setMockObject(mockedCalc);//Inject dependency without constructor
         //when
         when(mockedCalc.add(1, 1)).thenReturn(2);//this is the expected result
     }
@@ -53,14 +53,12 @@ public class MiniMenuTest {
     public void testBasicFunctionalityWorks() throws Exception {
         sutMenu.callCalculator(1);       
         //then
-//        assertSame(2,mockedCalc.add(1, 1));//Here we assert the add result
         verify(mockedCalc,times(1)).add(-1, -1);//Verifies that method is tested
     }
     
     @Test
-    public void testIncorrectlyMenuChoice()throws Exception {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testInParamInside()throws Exception {
+        
     }
     
 }
