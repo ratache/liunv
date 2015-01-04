@@ -1,27 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package junittesting;
 
 import static org.hamcrest.CoreMatchers.is;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 /**
  *
  * @author Per Johansson
- * this test follows a guide/book called Instant Mockito by
- * Grzejszczak, Marcin. 
- * Notes about procedure of testing with this framework
- * For each defined test method:
-    * 1.define how your mock should behave(given)
-    * 2.execute the code(when)
-    * 3.verify the behaviour on the mock (then) 
  * REFs:
  * http://martinfowler.com/articles/mocksArentStubs.html
  * In these tests the collaborator is MiniCalc and SUT is MiniMenu
@@ -48,23 +38,28 @@ public class MiniMenuTest {
         This test tests behaviour when menu choice is correct.
         We have three different abstract valuetypes, the choice of the user
         the expected result and input.
+        *SUT MiniMenu.callCalculator()
     */
     @Test
     public void testCorrectlyMenuChoice() throws Exception {
         //given
-        int menuChoice,add = 1;
+        int menuChoice = 1;
+        int num1 = 1;
+        int num2 = 1;
         int result = 2;
-        when(bobMock.add(add, add)).thenReturn(result);//this is the expected result
+        
+        when(bobMock.add(num1, num1)).thenReturn(result);//this is the expected result
+        
         //when
-        int resultOfCall = bobMenu.getChoice();
+        bobMenu.callCalculator(menuChoice);
         //then
-        assertThat(resultOfCall, is(result));
+        verify(bobMock).add(num1, num2);
     }
     
-    @Test
-    public void testIncorrectlyMenuChoice()throws Exception {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+//    @Test
+//    public void testIncorrectlyMenuChoice()throws Exception {
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
     
 }

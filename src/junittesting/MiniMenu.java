@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package junittesting;
 
 import java.io.IOException;
@@ -12,7 +7,8 @@ import java.io.IOException;
  * @author Per
  */
 public class MiniMenu {
-
+    private MiniCalc calc = new MiniCalc();
+    
     boolean run() throws IOException {
         int choice = getChoice();
         if(choice!=7){
@@ -41,7 +37,26 @@ public class MiniMenu {
         return choice;
     }    
 
-    private void callCalculator(int choice) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void callCalculator(int choice) throws IOException {
+        int integer1 = 0;
+        int integer2 = 0;
+        int integerResult = 0;
+        double doubleResult = 0.0;
+        
+        if(choice==1){
+            System.out.println("***************************************\n"
+                + "Addition\n"
+                + "***************************************\n"
+                    + "Enter first integer:");
+            integer1 = System.in.read();
+            System.out.println("\nEnter second integer:");
+            integer2 = System.in.read();
+            integerResult = calc.add(integer1, integer2);
+            printResult(Integer.toString(integerResult));
+        }
+    }
+
+    private void printResult(String integerResult) {
+        System.out.println("\nResult "+integerResult+"\n");
     }
 }
