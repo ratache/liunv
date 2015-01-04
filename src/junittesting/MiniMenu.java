@@ -7,8 +7,15 @@ package junittesting;
 
 /**
  *
- * @author UndeadAmilo
+ * @author Per
  */
 public class MiniMenu {
-    
+
+    boolean run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public int getChoice() {
+        return 2;
+    }    
 }

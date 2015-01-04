@@ -6,15 +6,17 @@ package junittesting;
 
 /**
  *
- * @author UndeadAmilo
+ * @author Per
  */
 public class main {
-    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        MiniMenu menu = new MiniMenu();
+        while(!menu.run()){
+            System.out.println("Program Quit");
+        }
     }
     
 }
