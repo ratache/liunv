@@ -57,10 +57,10 @@ public class MiniMenuTest {
         verify(mockedCalc,times(1)).add(-1, -1);//Verifies that method is tested
     }
     
-//    @Test
-//    public void testIncorrectlyMenuChoice()throws Exception {
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testIncorrectlyMenuChoice()throws Exception {
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }
