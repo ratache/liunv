@@ -58,12 +58,12 @@ public class MiniMenuTest {
         when(mockedCalc.intToHex(1)).thenReturn("1");//this is the expected result
         when(mockedCalc.intToBinary(1)).thenReturn("1");//this is the expected result
         
-        sutMenu.callCalculator(1);       
-        sutMenu.callCalculator(2);
-        sutMenu.callCalculator(3);
-        sutMenu.callCalculator(4);
-        sutMenu.callCalculator(5);
-        sutMenu.callCalculator(6);
+        sutMenu.callCalculator(1,1,1,0,0);       
+        sutMenu.callCalculator(2,-1,-1,0,0);
+        sutMenu.callCalculator(3,-1,-1,0,0);
+        sutMenu.callCalculator(4,-1,-1,0,0);
+        sutMenu.callCalculator(5,1,0,0,0);
+        sutMenu.callCalculator(6,1,0,0,0);
         
         //then
         verify(mockedCalc,times(1)).add(1, 1);//Verifies that method is tested
