@@ -4,18 +4,26 @@
  */
 package junittesting;
 
+import java.io.IOException;
+
 /**
  *
- * @author UndeadAmilo
+ * @author Per
  */
-<span class="nc" id="L11">public class main {</span>
-    
+<span class="nc" id="L13">public class main {</span>
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-
-<span class="nc" id="L18">    }</span>
+    public static void main(String[] args) throws IOException {        
+<span class="nc" id="L18">        MiniMenu menu = new MiniMenu(new MiniCalc());</span>
+<span class="nc" id="L19">        boolean quit = false;</span>
+<span class="nc bnc" id="L20" title="All 2 branches missed.">        while(!quit){</span>
+<span class="nc" id="L21">            quit = menu.run();</span>
+        }
+        
+<span class="nc" id="L24">        System.out.println(&quot;Program Quit&quot;);</span>
+<span class="nc" id="L25">        System.exit(0);</span>
+<span class="nc" id="L26">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.2.201409121644</span></div></body></html>

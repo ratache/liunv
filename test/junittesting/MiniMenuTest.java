@@ -36,11 +36,10 @@ public class MiniMenuTest {
     @Before
     public void setUp() {
         //given
-        sutMenu = new MiniMenu();
         mockedCalc = mock(MiniCalc.class);
-        sutMenu.setMockObject(mockedCalc);//Inject dependency without constructor
-        //when
-        when(mockedCalc.add(1, 1)).thenReturn(2);//this is the expected result
+        sutMenu = new MiniMenu(mockedCalc);
+        
+        //sutMenu.setMockObject(mockedCalc);//Inject dependency without constructor
     }
 
     /*
@@ -50,10 +49,29 @@ public class MiniMenuTest {
         *SUT MiniMenu.callCalculator()
     */
     @Test
-    public void testBasicFunctionalityWorks() throws Exception {
+    public void testBasicMenuFunctionality() throws Exception {
+        //when        
+        when(mockedCalc.add(1, 1)).thenReturn(2);//this is the expected result
+        when(mockedCalc.subtract(-1, -1)).thenReturn(-2);//this is the expected result
+        when(mockedCalc.divide(-1, -1)).thenReturn(1.0);//this is the expected result
+        when(mockedCalc.multiply(-1, -1)).thenReturn(1);//this is the expected result
+        when(mockedCalc.intToHex(1)).thenReturn("1");//this is the expected result
+        when(mockedCalc.intToBinary(1)).thenReturn("1");//this is the expected result
+        
         sutMenu.callCalculator(1);       
+        sutMenu.callCalculator(2);
+        sutMenu.callCalculator(3);
+        sutMenu.callCalculator(4);
+        sutMenu.callCalculator(5);
+        sutMenu.callCalculator(6);
+        
         //then
         verify(mockedCalc,times(1)).add(1, 1);//Verifies that method is tested
+        verify(mockedCalc,times(1)).subtract(-1, -1);//Verifies that method is tested
+        verify(mockedCalc,times(1)).divide(-1, -1);//Verifies that method is tested
+        verify(mockedCalc,times(1)).multiply(-1, -1);//Verifies that method is tested
+        verify(mockedCalc,times(1)).intToHex(1);//Verifies that method is tested
+        verify(mockedCalc,times(1)).intToBinary(1);//Verifies that method is tested
     }
     
     @Test
